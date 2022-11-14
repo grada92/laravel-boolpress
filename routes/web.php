@@ -28,3 +28,7 @@ Route::middleware('auth')  //si collega alla cartella middleware
     ->name('home');
 }
 );
+
+Route::get('{any?}', function() {  // per qualsiasi altra rotta mandami in guest.home
+    return view("guest.home");
+})->where("any", ".*");
