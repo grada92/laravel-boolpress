@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('admin.home');
+})->name('index');
 
 Auth::routes();
 
@@ -25,7 +25,8 @@ Route::middleware('auth')  //si collega alla cartella middleware
 ->prefix('admin')
 ->group(function () {
     Route::get('/' , 'HomeController@index') // rotta se utente autenticato
-    ->name('home');
+    ->name('index');
+    Route::resource('posts' , 'PostController' );
 }
 );
 
