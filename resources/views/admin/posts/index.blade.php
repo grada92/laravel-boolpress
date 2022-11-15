@@ -12,6 +12,9 @@
     <input type="submit" value="Delete">
 
     </form>
+
+    <a class="btn btn-warning" href="{{ route('admin.posts.edit', $post->id) }}">Aggiorna</a>
+
 </div>
 
 @endforeach
