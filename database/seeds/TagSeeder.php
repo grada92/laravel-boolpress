@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Tag;
 class TagSeeder extends Seeder
 {
     /**
@@ -11,6 +11,13 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $tags = ['Cibo', 'Moda', 'Make-Up', 'Vino', 'Lettura', 'Europa', 'America', 'Asia', 'Albergo'];
+        foreach ($tags as $tagname) {
+            $tag = new Tag();
+            $tag->name = $tagname;
+            $tag->slug = Str::slug($tag->name);
+            $tag->save();
+        }
+
     }
 }

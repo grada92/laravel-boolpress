@@ -18,6 +18,13 @@
         <option value="{{$category->id}}">{{$category->name}}</option>
     @endforeach
     </select>
+
+    <h2>Tags:</h2>
+    @foreach ($tags as $tag)
+
+    <label for="tags[]">{{$tag->name}}</label>
+    <input type="checkbox" name="tags[]" value="{{$tag->id}}">
+    @endforeach
      <div class=" pt-5 d-flex justify-content-center">
         <input type="submit" class="btn btn-success" value="Registra">
     </div>
