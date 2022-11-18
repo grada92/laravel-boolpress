@@ -27,6 +27,7 @@ Route::middleware('auth')  //si collega alla cartella middleware
     Route::get('/' , 'HomeController@index') // rotta se utente autenticato
     ->name('index');
     Route::resource('posts' , 'PostController' );
+    Route::resource('categories', 'CategoryController');
 }
 );
 
