@@ -1,10 +1,16 @@
 <template>
-  <div>App vue</div>
+  <div>
+    <h1>Lista Post</h1>
+     <PostComponent/>
+  </div>
+
 </template>
 
 <script>
+import PostComponent from '../components/PostComponent.vue'
 export default {
     name:'App',
+    components:{PostComponent}
 }
 </script>
 
