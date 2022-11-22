@@ -1,16 +1,19 @@
 <template>
   <div>
     <h1>Lista Post</h1>
-     <PostComponent/>
+
+	<router-view></router-view>  <!--in questo modo prende la rotta definita prima in new VueRouter-->
+
+
   </div>
 
 </template>
 
 <script>
-import PostComponent from '../components/PostComponent.vue'
+
 export default {
     name:'App',
-    components:{PostComponent}
+
 }
 </script>
 
